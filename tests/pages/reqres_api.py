@@ -1,10 +1,9 @@
 import requests
 from requests import Response
-
 from config import Config
 
 
-class ReqresApi:
+class ReqresAPI:
     def __init__(self, headers: dict | None = None):
         self.base_url = Config.REQRES_BASE_URL
         self.headers = headers if headers else {}
