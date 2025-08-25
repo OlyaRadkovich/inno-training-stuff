@@ -2,6 +2,7 @@ import pytest
 from config import Config
 from tests.pages.reqres_api import ReqresAPI
 from tests.pages.dummy_api import DummyAPI
+from tests.pages.booker_api import BookerAPI
 
 
 @pytest.fixture(scope="module")
@@ -16,4 +17,10 @@ def reqres_api():
 @pytest.fixture(scope="module")
 def dummy_api():
     api = DummyAPI()
+    return api
+
+
+@pytest.fixture(scope="module")
+def booker_api():
+    api = BookerAPI()
     return api
